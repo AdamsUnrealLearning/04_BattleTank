@@ -3,11 +3,11 @@
 #pragma once
 
 #include "Engine/World.h"
-#include "Tank.h"
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
+class ATank;
 /**
  * 
  */
@@ -26,7 +26,7 @@ public:
 	void AimTowardsCrosshair();
 
 private:
-	float LineTraceRange = 1000000.f;
+	float LineTraceRange = 100000.f;
 
 	UPROPERTY(EditAnywhere)
 	float CrossHairXLocation = 0.5;

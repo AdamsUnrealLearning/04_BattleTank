@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TankPlayerController.h"
+#include "Tank.h"
 
 
 void ATankPlayerController::BeginPlay()
@@ -52,6 +53,7 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) cons
 	if (GetLookDirection(ScreenLocation, LookDirection)) {
 		// line-trace along that look direction	
 		GetLookVectorHitLocation(LookDirection, OutHitLocation);
+		return false;
 	}
 	
 	return true;

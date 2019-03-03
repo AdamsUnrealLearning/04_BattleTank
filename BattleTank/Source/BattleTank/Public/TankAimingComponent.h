@@ -24,8 +24,6 @@ public:
 	void SetBarrelReference(UTankBarrel* BarrelToSet);
 
 	// TODO add turrer reference
-
-public:	
 	void AimAt(FVector HitLocation, float LaunchSpeed);
 
 

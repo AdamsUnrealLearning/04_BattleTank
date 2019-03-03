@@ -2,6 +2,7 @@
 
 #include "TankPlayerController.h"
 #include "Tank.h"
+#include "BattleTank.h"
 
 
 void ATankPlayerController::BeginPlay()
@@ -53,10 +54,10 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) cons
 	if (GetLookDirection(ScreenLocation, LookDirection)) {
 		// line-trace along that look direction	
 		GetLookVectorHitLocation(LookDirection, OutHitLocation);
-		return false;
+		return true;
 	}
 	
-	return true;
+	return false;
 }
 
 bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const

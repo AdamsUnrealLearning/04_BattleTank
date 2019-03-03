@@ -16,7 +16,7 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
-public:
+private:
 	ATank* GetControlledTank() const;
 	
 	virtual void BeginPlay() override;
@@ -25,7 +25,7 @@ public:
 
 	void AimTowardsCrosshair();
 
-private:
+	UPROPERTY(EditAnywhere)
 	float LineTraceRange = 100000.f;
 
 	UPROPERTY(EditAnywhere)

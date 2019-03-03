@@ -2,6 +2,7 @@
 
 #include "TankAIController.h"
 #include "Tank.h"
+#include "BattleTank.h"
 
 
 
@@ -14,16 +15,7 @@ void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	auto tank = GetAITank();
-
 	auto player = GetPlayerTank();
-
-	if (!tank) {
-		UE_LOG(LogTemp, Warning, TEXT("Not possesing a tank"))
-	}
-	else {
-		UE_LOG(LogTemp, Warning, TEXT("Tank %s calling for duty!"), *tank->GetName())
-	}
 
 	if (!player) {
 		UE_LOG(LogTemp, Warning, TEXT("\nPlayer not found"))
